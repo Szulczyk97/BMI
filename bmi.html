@@ -1,0 +1,89 @@
+<!doctype html>
+	<html lang="pl">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="robots" content="index, follow"/>
+			<meta name="author" content="Przemysław Szułczyński"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<meta name="description" content="Projekt BMI - program pozwalający wyliczyć masę ciała."/>
+
+			<meta property="og:type" content="website"/>
+      		<meta property="og:url" content="https://szulczyk.pl/projekt-1/bmi"/>
+      		<meta property="og:title" content="Szulczyk.pl | Projekt 1"/>
+      		<meta property="og:description" content="Kalkulator BMI - Program Obliczający Masę Ciała"/>
+      		<meta property="og:image" content="../favicon-512x512.webp"/>
+
+			<title>Kalkulator BMI - Program Obliczający Masę Ciała</title>
+			<link rel="stylesheet" media="(width >= 1350px)" href="./css_bmi/bmi_domyslne.css"/>
+			<link rel="stylesheet" media="(1000px <= width < 1350px)" href="./css_bmi/bmi_maly_komputer.css"/>
+			<link rel="stylesheet" media="(640px <= width < 1000px)" href="./css_bmi/bmi_tablet.css"/>
+			<link rel="stylesheet" media="(width < 640px)" href="./css_bmi/bmi_telefon.css"/>
+			<link rel="apple-touch-icon" sizes="180x180" href="../favicon-touch-icon.webp"/>
+      		<link rel="icon" type="image/webp" sizes="32x32" href="../favicon-32x32.webp"/>
+      		<link rel="icon" type="image/webp" sizes="16x16" href="../favicon-16x16.webp"/>
+			<link rel="shortcut icon" href="../favicon.ico"/>
+			<script type="text/javascript" src="./skrypty_bmi/bmi.js" defer></script>
+		</head>
+			<body>
+				<div id="kontener">
+					<div id="naglowek">Kalkulator BMI<br/>Oblicz swoją masę ciała</div>
+					<div id="opis">
+						<div id="tytul1">Czym jest BMI?</div>
+						<div class="informacje1">BMI - (ang. Body Mass Index) zwany również wskaźnikiem Queteleta II to metoda służąca do szybkiego obliczania własnej masy ciała. Współczynnik ten jest standardowym wskaźnikiem oceny masy ciała wykorzystywanym do oceny porównawczej różnych grup społecznych. Minusem klasyfikacji BMI jest brak uwzględnienia typu budowy ciała, co powoduje, iż nie zawsze wysoka masa ciała musi wynikać z zawartości tkanki tłuszczowej w organizmie. Różnice te mogą być widoczne w przypadku nawet 1/3 dorosłych kobiet, natomiast u kulturystów odmienne wskaźniki BMI mogą wskazywać na skrajną otyłość przy niewielkiej rzeczywistej zawartości tkanki tłuszczowej. Związek między wielkością wskaźnika a ryzykiem chorób może się różnić pomiędzy populacjami o różnych proporcjach ciała. I tak wśród Azjatów ryzyko cukrzycy jest znacząco wyższe przy niższych wartościach BMI. Zawartość tłuszczu w organizmie jest także wyższa u kobiet niż u mężczyzn przy normalnej masie ciała. W przypadku kobiet tkanka tłuszczowa odpowiada za płodność oraz dojrzewanie płciowe. U obu płci obecność tkanki tłuszczowej jest ważna, ponieważ m.in. chroni ona narządy wewnętrzne przed urazami czy pełni funkcję termoizolacyjną organizmu. W praktyce klinicznej nie stosuje się wskaźnika BMI do oznaczania prawidłowej masy ciała u dzieci oraz u kobiet będących w ciąży.</div>
+
+						<div id="tytul2">Jak obliczyć BMI?</div>
+						<div id="informacje2">Nasze BMI to iloraz masy ciała wyrażony w kilogramach do podniesionego do kwadratu wzrostu w metrach.</div>
+						<div id="wzor">Wzór:<br/>
+							<div id="rownanie1">BMI = </div><div id="rownanie2">masa[kg]<hr/>(wzrost[m])<sup>2</sup></div>
+						</div>
+
+						<div id="tytul3">Klasyfikacja wyników BMI</div>
+						<div class="informacje1">Normy wskaźnika BMI zostały sporządzone przez Światową Organizację Zdrowia. Najczęściej występującym typem klasyfikacji wyników jest kategoryzacja rozszerzona, która prezentuje się w poniższy sposób:</div>
+						<div id="pole_glowne">
+							<div id="wyniki">
+								<ul>
+									<li class="wyglodzenie"><span class="oczysc">poniżej 16 &rarr; wygłodzenie</span></li>
+									<li class="wychudzenie"><span class="oczysc">16-16.99 &rarr; wychudzenie</span></li>
+									<li class="niedowaga"><span class="oczysc">17-18.49 &rarr; niedowaga</span></li>
+									<li class="prawidlowa"><span class="oczysc">18.5-24.99 &rarr; waga prawidłowa</span></li>
+									<li class="nadwaga"><span class="oczysc">25-29.99 &rarr; nadwaga</span></li>
+									<li class="otylosc1"><span class="oczysc">30-34.99 &rarr; otyłość I stopnia</span></li>
+									<li class="otylosc2"><span class="oczysc">35-39.99 &rarr; otyłość II stopnia</span></li>
+									<li class="otylosc3"><span class="oczysc">powyżej 40 &rarr; otyłość III stopnia</span></li>
+								</ul>
+							</div>
+							<div id="kalkulator">
+								<label for="waga">Waga</label> <input id="waga" type="number" step="0.1" min="30" max="300" placeholder="75" autocomplete="off"/> kg<br/>
+								<sup id="popraw1"></sup><br/>
+								<label for="wzrost">Wzrost</label> <input id="wzrost" type="number" step="1" min="50" max="300" placeholder="170" autocomplete="off"/> cm<br/>
+								<sup id="popraw2"></sup><br/>
+								<input id="przycisk" type="button" value="Oblicz BMI"/>
+							</div>
+							<div id="rezultat"></div>
+						</div>
+
+						<div id="szczegoly">
+							<ul>
+								<li class="wyglodzenie"><span class="oczysc2">Wygłodzenie</span></li><br/>
+								<div class="informacje3">Wskaźnik BMI wskazujący na wygłodzenie (poniżej 16) oznacza brak odpowiedniego dostarczania lub wchłaniania substancji odżywczych przez organizm, co może skutkować wieloma komplikacjami zdrowotnymi. Nieleczone wygłodzenie stanowi bezpośrednie zagrożenie dla życia i zdrowia człowieka, w tym liczne niekorzystne zmiany składu ciała czy też zaburzenia pracy różnych narządów wewnętrznych. Najczęstszą przyczyną wygłodzenia są zaburzenia odżywiania spowodowane chorobami takimi jak anoreksja czy bulimia. Sposób leczenia wygłodzenia uzależniony jest od jego przyczyny i stopnia zaawansowania, jednak najważniejszym czynnikiem pozwalającym na powrót do zdrowia jest wprowadzenie odpowiedniej diety.</div>
+								<li class="wychudzenie"><span class="oczysc2">Wychudzenie</span></li><br/>
+								<div class="informacje3">Wychudzenie (16-16.99) to patologiczny stan organizmu, w którym człowiek ma zbyt niską masę ciała spowodowaną niedoborem substancji odżywczych. Stan ten charakteryzuje się najczęściej brakiem apetytu, pogorszeniem stanu skóry, uczuciem zimna, problemami z koncentracją czy bardzo często występującym zmęczeniem. Nieleczone wychudzenie może prowadzić do poważnych problemów zdrowotnych, a nawet zmienić się w wygłodzenie co jest bezpośrednim zagrożeniem życia. W celu poprawy zdrowia zaleca się zastosowanie diety zwiększającej ilość spożywanych węglowodanów oraz produkty o dużej wartości energetycznej.</div>
+								<li class="niedowaga"><span class="oczysc2">Niedowaga</span></li><br/>
+								<div class="informacje3">Jest to stan (17-18.49) niedoboru masy ciała, w którym organizm nie otrzymuje wystarczającej ilości pożywienia. Skutkiem tego mogą być problemy z koncentracją, ciągłe zmęczenie, senność lub apatia. U osób z niedowagą możemy również zaobserwować obniżenie się sprawności fizycznej. Najbardziej skutecznym krokiem w walce z niedowagą jak w przypadku poprzednich wskaźników jest odpowiednio dobrana i zbilansowana dieta.</div>
+								<li class="prawidlowa"><span class="oczysc2">Waga prawidłowa</span></li><br/>
+								<div class="informacje3">Najczęstszy i najbardziej pożądany wskaźnik BMI, czyli waga prawidłowa (18.5-24.99). Jest to najzdrowszy ze wszystkich wskaźników stan charakteryzujący się między innymi zwiększoną ogólną odpornością organizmu. Dodatkowo osoby posiadające wagę prawidłową mają zmniejszone ryzyko zachorowania na cukrzycę i choroby układu krążenia. Aby zachować takowe pozytywne skutki, należy pamiętać o prawidłowej diecie oraz o utrzymywaniu aktywnego trybu życia.</div>
+								<li class="nadwaga"><span class="oczysc2">Nadwaga</span></li><br/>
+								<div class="informacje3">Stan (25-29.99) spowodowany nadmiernym przejadaniem się oraz małą aktywnością fizyczną, który powoduje nagromadzenie się tkanki tłuszczowej w organizmie. Nadwaga jest typową cechą w populacjach obszarów zurbanizowanych krajów rozwijających się i rozwiniętych. Na świecie liczba osób z nadwagą stale się powiększa, w szczególności wzrasta wraz z wiekiem, zwłaszcza wśród kobiet. Prostym rozwiązaniem na pozbycie się nadwagi jest ograniczenie produktów bogatych w tłuszcze i węglowodany, zwiększona aktywność fizyczna oraz prowadzenie zdrowego trybu życia.</div>
+								<li class="otylosc1"><span class="oczysc2">Otyłość I stopnia</span></li><br/>
+								<div class="informacje3">Z otyłością I stopnia (30-34.99) wiąże się bardzo mocno zwiększona masa ciała znacznie przewyższająca zwykłą nadwagę. Powodem takiego stanu jest zaburzony bilans energetyczny organizmu, czyli dostarczanie organizmowi zbyt dużej ilości pożywienia. Dodatkowym czynnikiem pogłębiającym otyłość jest siedzący tryb życia oraz brak aktywności fizycznej. Otyłość I stopnia rzadko wymaga interwencji chirurgicznej. W większości przypadków do zrzucenia zbędnych kilogramów zaleca się stosowanie aktywności fizycznej oraz odpowiedniej diety.</div>
+								<li class="otylosc2"><span class="oczysc2">Otyłość II stopnia</span></li><br/>
+								<div class="informacje3">Bardziej zaawansowany stan otyłości (35-39.99), który jeszcze mocniej wpływa na obciążenie organizmu i obniżenie jego odporności. Może zwiększyć ryzyko wystąpienia chorób serca, udaru mózgu, chorób układu krążenia czy chorób stawów. W celu pozbycia się nadmiernej tkanki tłuszczowej zalecana jest redukcja masy ciała wraz z zastosowaniem zbilansowanej diety oraz farmakoterapii. W wyjątkowych przypadkach możliwe jest przeprowadzenie zabiegu operacyjnego pomagającego w powrocie do odpowiedniej wagi.</div>
+								<li class="otylosc3"><span class="oczysc2">Otyłość III stopnia</span></li><br/>
+								<div class="informacje3">Najgorszy i zarazem najbardziej zaawansowany stopień otyłości (powyżej 40), wiążący się z ogromnym ryzykiem poważnych powikłań zdrowotnych. Przy leczeniu tego stanu otyłości wymagane jest leczenie bariatryczne oraz zalecane jest także dodatkowo leczenie chirurgiczne, a sam powrót do odpowiedniej wagi to bardzo długi proces. Ostatecznie jednak ilość osób przekraczająca trzeci stopień otyłości zdarza się niezwykle rzadko.</div>
+							</ul>
+						</div>
+					</div>
+					<div id="stopka">&copy; 2024 Szulczyk - Przemysław Szułczyński</div>
+				</div>	
+			</body>
+	</html>
