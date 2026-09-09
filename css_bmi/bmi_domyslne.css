@@ -12,6 +12,7 @@
 
 body{
 	max-width: 1920px;
+	margin: var(--wysrodkowanie);
 	background-image: url("../obrazki_bmi/tapeta_bmi.webp");
 }
 
